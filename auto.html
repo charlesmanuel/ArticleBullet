@@ -29,7 +29,7 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-light bg-secondary border-bottom border-light static-top">
+  <nav class="navbar navbar-light border-bottom border-light bg-secondary static-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">Article Bullet</a>
       <a class="btn btn-primary" href="#">Sign In</a>
@@ -43,7 +43,7 @@
       <div class="row">
         <div class="col mx-auto">
         </div>
-        <div class="col-4 mx-auto" align="center">
+        <div id="menu" class="col-4 mx-auto border border-dark rounded" align="center">
           <form id="form">
             <div class="form-group" id="form1">
               <label for "inputTitle">Title</label>
@@ -51,7 +51,7 @@
             </div>
             <div class="form-group" id="form2">
               <label for "inputAuthor">Author</label>
-              <input type="text" class="form-control" id="inputAuthor" aria-describedby="emailHelp" placeholder="Enter title">
+              <input type="text" class="form-control" id="inputAuthor" aria-describedby="emailHelp" placeholder="Enter author">
             </div>
             <div class="form-group" id="form3">
               <label for "inputNumber">Number of Bullets</label>
@@ -66,7 +66,11 @@
                 <option>8</option>
               </select>
             </div>
-            <button type="button" class="btn btn-primary" onclick="phase2()">Next</button>
+            <div class="form-group" id="form4">
+              <label for "inputText1">Full Text</label>
+              <textarea id = "intext" class="form-control" rows="3" placeholder="Paste full text here" required></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" id="autobutton">Next</button>
           </form>
         </div>
         <div class = "col-1"></div>
@@ -145,6 +149,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="./tldr-News-master/tldr.js"></script>
+  <script type="text/javascript" src="./scripts/tldr2.js"></script>
 
 </body>
 

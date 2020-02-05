@@ -32,7 +32,7 @@ function phase1(){
   var text = "";
   var i;
   for (i=0; i<inputN; i++){
-    text+="<li></li>";
+    text+="<li id=\"bullet" + (i+1) + "\"></li>";
   }
   document.getElementById("list1").innerHTML = text;
   return inputN;
@@ -43,13 +43,16 @@ function phase2(){
   document.getElementById('form1').remove();
   document.getElementById('form2').remove();
   document.getElementById('form3').remove();
-  var text = "<div class='form-group' id='newform'> <div class='row'><div class='col-10' id='maincol'> <label for 'bullets'>Bullet Points</label></div><div class='col-2' id='sidecol'><label for 'checks'>Expand?</div></div></div>";
+  var text = "<div class='form-group' id='newform'><label for 'bullets'>Bullet Points</label></div>";
   document.getElementById('form').innerHTML = text;
   for (i=0; i<num; i++){
     var x = document.createElement("input");
     var att = document.createAttribute("type");
     att.value = "text";
     x.setAttributeNode(att);
+    var idAtt = document.createAttribute("id");
+    idAtt.value = "inputbullet" + (i+1);
+    x.setAttributeNode(idAtt);
     var att2 = document.createAttribute("class");
     att2.value = "form-control";
     x.setAttributeNode(att2);
@@ -61,7 +64,9 @@ function phase2(){
     att4.value = "margin-bottom:10px";
     x.setAttributeNode(att4);
     //type='text' class='form-control' id='bullet"+(i+1)+"' placeholder='Bullet "+(i+1)+"'"
-    document.getElementById('maincol').appendChild(x);
+    document.getElementById('newform').appendChild(x);
+
+    /*
     var checkbox = document.createElement("input");
     var catt = document.createAttribute("type");
     catt.value = "checkbox";
@@ -70,7 +75,34 @@ function phase2(){
     catt2.value = "form-check-input";
     checkbox.setAttributeNode(catt2);
     document.getElementById('sidecol').appendChild(checkbox);
-    var break1 = document.createElement("BR");
-    document.getElementById('sidecol').appendChild(break);
+    */
+  }
+  text2 = "  <button type=\"button\" class=\"btn btn-primary\" onclick=\"populateBullets(" +num+")\">Next<\/button>"
+  document.getElementById('form').insertAdjacentHTML('beforeend', text2);
+
+}
+
+function populateBullets(num) {
+
+console.log(num);
+
+  for (i=0; i <num; i++) {
+    var outputID = "bullet" + (i+1);
+    console.log(outputID);
+    var inputID = "inputbullet" + (i+1);
+    console.log(inputID);
+
+    var input = document.getElementById(inputID).value;
+
+    console.log(input);
+
+
+    var outpt = document.getElementById(outputID);
+
+    console.log(input);
+
+    document.getElementById(outputID).innerHTML = input;
+
+    var outpt = document.getElementById(outputID);
   }
 }

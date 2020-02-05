@@ -67,9 +67,15 @@ nav {
   float:left!important;
 }
 
+/*
 #menu {
   background-color:#4c5760 !important;
   padding:15px!important;
   border-width:1px!important;
   border-color:#F5F5F5	!important;
+}
+*/
+
+option {
+  margin-left:30%;
 }

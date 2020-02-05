@@ -84,22 +84,17 @@ function phase2(){
 
 function populateBullets(num) {
 
-console.log(num);
 
   for (i=0; i <num; i++) {
     var outputID = "bullet" + (i+1);
-    console.log(outputID);
     var inputID = "inputbullet" + (i+1);
-    console.log(inputID);
 
     var input = document.getElementById(inputID).value;
 
-    console.log(input);
 
 
     var outpt = document.getElementById(outputID);
 
-    console.log(input);
 
     document.getElementById(outputID).innerHTML = input;
 

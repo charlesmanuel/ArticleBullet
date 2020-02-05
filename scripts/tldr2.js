@@ -140,7 +140,7 @@ $(document).ready(function(){
         return IDFSentences;
     }
 
-    function TFIDF(documents){
+    function TFIDF(documents, numbul){
         // calculates TF*IDF
         const TFVals = termFrequency(documents);
         const IDFVals = inverseDocumentFrequency(documents);
@@ -157,10 +157,14 @@ $(document).ready(function(){
         let max = 0.0;
         let max2 = 0.0;
         let max3 = 0.0;
+        let max4 = 0.0;
+        let max5 = 0.0;
 
         let max_sentence = "";
         let max2Sent = "";
         let max3Sent = "";
+        let max4Sent = "";
+        let max5Sent = "";
 
 
         // finds the top 3 sentences in TFidfDict
@@ -178,18 +182,37 @@ $(document).ready(function(){
                 max3 = TFidfDict[key];
                 max3Sent = key;
             }
+            else if (TFidfDict[key] > max4 && TFidfDict[key] < max3 && TFidfDict[key] < max2 && TFidfDict[key] < max){
+              max4 = TFidfDict[key];
+              max4Sent = key;
+            }
+            else if (TFidfDict[key] > max5 && TFidfDict[key] < max4 && TFidfDict[key] < max3 && TFidfDict[key] < max2 && TFidfDict[key] < max){
+              max5 = TFidfDict[key];
+              max5Sent = key;
+            }
         }
-        var text = ("<li>" + max_sentence + "</li><li>" + max2Sent + "</li><li>" + max3Sent + "</li>");
-        console.log(text);
-        return ("<li>" + max_sentence + "</li><li>" + max2Sent + "</li><li>" + max3Sent + "</li>");
+
+        var fulltext = "";
+        var sentences = [max_sentence, max2Sent, max3Sent, max4Sent, max5Sent];
+
+        console.log("Highest value sentence:")
+        console.log(sentences[0]);
+        console.log("Fifth highest value sentence");
+        console.log(sentences[4]);
+
+        for (i=0; i<numbul; i++){
+          fulltext+="<li>";
+          fulltext+= sentences[i];
+          fulltext+="<\/li>";
+        }
+
+        return (fulltext);
     }
-    console.log("successful click");
     let $article = $('#intext').val();
-    console.log($article);
-    $("#listitem1").remove();
-    $("#listitem2").remove();
-    $("#listitem3").remove();
-    let insert = $('#list1').append(TFIDF($article));
+    var numbul = $('#inputNumber').val();
+
+    $("#list1").empty();
+    let insert = $('#list1').append(TFIDF($article, numbul));
     var title = $('#inputTitle').val();
     var author = $('#inputAuthor').val();
     $('#previewTitle').html(title);

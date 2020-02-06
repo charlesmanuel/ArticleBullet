@@ -23,6 +23,20 @@ header li{
 }
 */
 
+.invis {
+  border-style:none!important;
+  background-color:inherit!important;
+}
+.invis:focus {
+  outline:0!important;
+}
+
+
+
+#drop {
+
+}
+
 label{
   color:white!important;
 }
@@ -78,4 +92,19 @@ nav {
 
 option {
   margin-left:30%;
+}
+
+.centerimg {
+  position:relative;
+  display: block;
+  margin:0 auto;
+  left:-24px;
+  width: 50%;
+}
+
+.linkbtn {
+  padding-top: 1px;
+  padding-right: 7px;
+  padding-bottom: 2px;
+  padding-left: 7px;
 }

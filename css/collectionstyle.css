@@ -16,7 +16,7 @@
 }
 
 
-ul:before {
+ul:after {
   content:'';
   width:80%;
   height:297px;

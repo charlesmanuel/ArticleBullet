@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $(".subpt").hide();
   $(".subimg").hide();
+  $(".subtweet").hide();
   $('.drop').click(function(){
     var t = $(this).siblings(".subpt");
     if ($(t).is(":visible")) {
@@ -8,6 +9,16 @@ $(document).ready(function(){
     }
     else {
       $(t).show(750);
+    }
+  });
+
+  $('.droptweet').click(function(){
+    var tw = $(this).siblings(".subtweet");
+    if ($(tw).is(":visible")) {
+      $(tw).hide(750);
+    }
+    else {
+      $(tw).show(750);
     }
   });
 

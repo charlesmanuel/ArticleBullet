@@ -40,6 +40,14 @@ header li{
 label{
   color:white!important;
 }
+
+button {
+  padding-right:3px!important;
+  padding-left:3px!important;
+  padding-bottom:2px!important;
+  padding-top:1px!important;
+}
+
 /*
 .form-control {
   display:inline-block;
@@ -106,5 +114,31 @@ option {
   padding-top: 1px;
   padding-right: 7px;
   padding-bottom: 2px;
-  padding-left: 7px;
+  padding-left: 3px;
+}
+
+.twiticon {
+  padding-top: 1px;
+  padding-right: 7px;
+  padding-bottom: 2px;
+  padding-left: 3px;
+}
+
+.icon {
+  min-height:200px;
+  padding:4,3,3;
+  background-color:white!important;
+
+}
+
+.hiddentweet {
+
+}
+
+.previewthumb li {
+  font-size:10px!important;
+}
+
+.subsubpt, .subpt {
+  margin-top:8px;
 }

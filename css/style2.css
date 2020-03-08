@@ -107,7 +107,7 @@ option {
   display: block;
   margin:0 auto;
   left:-24px;
-  width: 50%;
+  width: 85%;
 }
 
 .linkbtn {
@@ -141,4 +141,23 @@ option {
 
 .subsubpt, .subpt {
   margin-top:8px;
+}
+
+.iframe-container {
+  overflow:hidden;
+  padding-top:56.25%;
+  position:relative;
+}
+
+.iframe-container iframe {
+  border:0;
+  height:100%;
+  width:100%;
+}
+
+table {
+  margin-top:15px!important;
+  margin-left:24px!important;
+  width:90%!important;
+
 }

@@ -13,6 +13,7 @@
   max-height:300px!important;
   overflow:hidden;
   border-width:3px!important;
+  min-width:188px!important;
 }
 
 
@@ -38,7 +39,7 @@ ul:after {
   color: #000000!important;
 }
 
-body a{
+.masthead2 a{
   color:#000000!important;
   text-decoration:none!important;
 }
@@ -95,4 +96,11 @@ header.masthead2 .overlay {
 
 nav {
   border:black;
+}
+
+
+@media only screen and (max-width: 990px) {
+  ul:after {
+    display:none;
+  }
 }

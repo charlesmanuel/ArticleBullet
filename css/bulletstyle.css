@@ -1,0 +1,63 @@
+.bulletpage {
+  padding:40px 30px 30px;
+  background-color:white!important;
+  border-width:3px!important;
+  margin-bottom:400px;
+  text-align:left;
+}
+
+.test[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #555;
+}
+
+.test[placeholder]:empty:focus:before {
+    content: "";
+}
+
+p {
+  font-style:italic;
+}
+
+.test2 {
+  width:84%;
+  display:inline-block;
+  vertical-align: middle;
+  padding-left:10px;
+}
+
+
+.btncol {
+  padding:0!important;
+  width:12%;
+  display:inline-block;
+  font-size:1rem!important;
+  vertical-align: top;
+  margin-left:-3px!important;
+  border-width:.5px;
+}
+
+
+.minusbutton {
+  padding-left:9.34px!important;
+  padding-right:9.34px!important;
+  padding-top:2px!important;
+  padding-bottom:2px!important;
+  background-color:#FF0000!important;
+  border-color:#000000!important;
+  border-radius:0!important;
+  border-left-color:#FF0000;
+  border-right-width:0px;
+  border-left-width:0px;
+}
+
+.addbutton {
+  padding-left:7px!important;
+  padding-right:7px!important;
+  padding-top:2px!important;
+  padding-bottom:2px!important;
+  border-top-left-radius:0!important;
+  border-bottom-left-radius:0!important;
+  margin-left:-3px;
+  border-color:#000000!important;
+}

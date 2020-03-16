@@ -50,27 +50,38 @@
           <p class="test" style="margin-left:24px" placeholder="Your Name"></p>
           <div contenteditable="false">
           <hr>
-          <ul style="text-align:left" contenteditable="false">
-            <li>
+          <ul style="text-align:left" id="ultext">
+            <li id="secretpt">
+              <textarea class="test2" rows="1"></textarea>
+              <div class="btncol" align="left">
+                <button class="btn btn-danger minusbutton" href="#">&#x2212;</button>
+                <button class="btn btn-primary addbutton" href="#">&#x22ef;</button>
+              </div>
+            </li>
+            <li id="firstpt">
               <textarea class="test2" rows="1" placeholder="Bullet 1"></textarea>
               <div class="btncol" align="left">
-                <button class="btn btn-primary minusbutton" href="#">&#x2212;</button>
+                <button class="btn btn-danger minusbutton" href="#">&#x2212;</button>
                 <button class="btn btn-primary addbutton" href="#">&#x22ef;</button>
               </div>
-            </li>            <li>
+            </li>
+            <li>
               <textarea class="test2" rows="1" placeholder="Bullet 2"></textarea>
               <div class="btncol" align="left">
-                <button class="btn btn-primary minusbutton" href="#">&#x2212;</button>
+                <button class="btn btn-danger minusbutton" href="#">&#x2212;</button>
                 <button class="btn btn-primary addbutton" href="#">&#x22ef;</button>
               </div>
-            </li>            <li>
+            </li>
+            <li>
               <textarea class="test2" rows="1" placeholder="Bullet 3"></textarea>
               <div class="btncol" align="left">
-                <button class="btn btn-primary minusbutton" href="#">&#x2212;</button>
+                <button class="btn btn-danger minusbutton" href="#">&#x2212;</button>
                 <button class="btn btn-primary addbutton" href="#">&#x22ef;</button>
               </div>
             </li>
           </ul>
+          <button class="btn btn-light newpt2" href="#">+</button>
+
         </div>
         </div>
       </div>
@@ -99,6 +110,7 @@
               <a href="#">Privacy Policy</a>
             </li>
           </ul>
+
           <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
         </div>
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">

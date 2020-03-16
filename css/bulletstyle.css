@@ -29,8 +29,8 @@ p {
 
 .btncol {
   padding:0!important;
-  width:12%;
-  display:inline-block;
+  width:12%!important;
+  display:inline-block!important;
   font-size:1rem!important;
   vertical-align: top;
   margin-left:-3px!important;
@@ -43,7 +43,6 @@ p {
   padding-right:9.34px!important;
   padding-top:2px!important;
   padding-bottom:2px!important;
-  background-color:#FF0000!important;
   border-color:#000000!important;
   border-radius:0!important;
   border-left-color:#FF0000;
@@ -60,4 +59,24 @@ p {
   border-bottom-left-radius:0!important;
   margin-left:-3px;
   border-color:#000000!important;
+}
+
+.newpt {
+  padding-left:9.34px!important;
+  padding-right:9.34px!important;
+  padding-top:2px!important;
+  padding-bottom:2px!important;
+  border-color:#000000!important;
+  background-color:#000000!important;
+
+}
+.newpt2 {
+  text-align:center!important;
+  width:78.5%!important;
+  border-color:#000000!important;
+  margin-left:40px;
+}
+
+#secretpt {
+  display:none;
 }

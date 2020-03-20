@@ -29,7 +29,7 @@ p {
 
 .btncol {
   padding:0!important;
-  width:12%!important;
+  width:13%;
   display:inline-block!important;
   font-size:1rem!important;
   vertical-align: top;
@@ -72,11 +72,90 @@ p {
 }
 .newpt2 {
   text-align:center!important;
-  width:78.5%!important;
+  width:84%!important;
   border-color:#000000!important;
-  margin-left:40px;
 }
 
 #secretpt {
   display:none;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 80px;
+  max-width:80px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border:solid;
+  border-width:1px!important;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 3px 4px;
+  text-decoration: none;
+  display: block;
+  vertical-align: middle;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+#secretul {
+  margin-top:15px;
+  display:none;
+}
+#secretul textarea {
+  width:82.8%;
+  display:inline-block;
+  vertical-align: middle;
+  padding-left:10px;
+}
+
+#secretul ul {
+  margin-bottom:20px;
+}
+
+.dropdown-content hr {
+  margin-top:.3px;
+  margin-bottom:.3px;
+}
+
+a img {
+  float:right;
+  padding-top:5.3px;
+}
+
+ul ul ul textarea {
+  width:81.5%!important;
+}
+ul ul ul .btncol {
+  width:14%!important;
+}
+ul ul ul ul textarea {
+  width:80%!important;
+
+}
+ul ul ul ul .btncol {
+  width:14.5%!important;
+}
+
+header li li{
+  margin-bottom:20px;
+}
+header li li li{
+  margin-bottom:20px;
+}
+
+header li {
+  margin-bottom:15px;
+}
+
+
+.texticonadded {
+  background-image:url(../svgs/icons/document-text.svg);
+  background-position:96%;
+  background-repeat:no-repeat;
+  background-size:1.35rem;
+  padding-right: 38px;
 }

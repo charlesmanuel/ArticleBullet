@@ -15,11 +15,6 @@ $(document).ready(function(){
 
     var subpt = $("#secretul").clone(true);
     $(subpt).css("display", "block");
-    if ($(this).hasClass("subsub")){
-      $(subpt).find("textarea").css("width", "81.5%");
-      $(subpt).find(".btncol").css("width", "62.27px");
-      console.log("sucessfully detected subsub");
-    }
     $(this).closest("li").append(subpt);
     $(this).closest(".dropdown-content").hide();
 

@@ -121,8 +121,9 @@ option {
 .twiticon {
   padding-top: 1px;
   padding-right: 7px;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
   padding-left: 3px;
+
 }
 
 .icon {
@@ -161,4 +162,12 @@ table {
   margin-left:24px!important;
   width:90%!important;
 
+}
+
+.container2 {
+  max-width:1900px!important;
+}
+
+.container3 {
+  max-width:1600px!important;
 }

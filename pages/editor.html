@@ -36,7 +36,7 @@
   <nav class="navbar bg-white border-bottom border-dark static-top" style="border-width:3px!important;">
     <div class="container">
       <a class="navbar-brand" style="color:#000000 !important" href="../index.html">Article Bullet</a>
-      <a class="btn btn-primary" href="#">Sign In</a>
+      <a class="btn btn-primary" href="#!">Sign In</a>
     </div>
   </nav>
 
@@ -51,32 +51,52 @@
           <div contenteditable="false">
           <hr>
           <ul style="text-align:left" id="ultext">
+            <!--modal link window -->
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <label for="inputURL">Web address (URL): </label>
+                <input type="text" id="inputURL" name="inputURL"></input>
+                <div class="buttonz">
+                  <button id="submitlink" class = "btn btn-primary">Submit</button>
+                  <button id="cancellink" class = "btn btn-secondary">Cancel</button>
+                </div>
+
+              </div>
+            </div>
             <li id="secretpt">
-              <textarea class="test2" rows="1"></textarea>
+              <textarea class="test2" data-icons="0" rows="1"></textarea>
               <div class="btncol" align="left">
-                <button class="btn btn-danger minusbutton" href="#">&#x2212;</button>
-                <button class="btn btn-primary addbutton" href="#">&#x22ef;</button>
+                <button class="btn btn-danger minusbutton" href="#!">&#x2212;</button>
+                <button class="btn btn-primary addbutton" href="#!">&#x22ef;</button>
                 <div class="dropdown-content">
-                  <a class = "textbutton" href="#">Text<img src="../svgs/icons/document-text.svg"></a>
+                  <a class = "textbutton" href="#!">Text<img src="../svgs/icons/document-text.svg"></a>
                   <hr>
-                  <a class = "imgbutton" href="#">Image<img src = "../svgs/icons/image.svg"></a>
+                  <a class = "imgbutton" href="#!">Image<img src = "../svgs/icons/image.svg"></a>
                   <hr>
-                  <a class = "linkbtn" href="#">Link<img src = "../svgs/icons/box-arrow-up-right.svg"></a>
+                  <a class = "linkbtn" href="#!">Link<img src = "../svgs/icons/box-arrow-up-right.svg"></a>
                 </div>
               </div>
             </li>
+            <ul id="secretimg">
+              <li>
+                <div class="imgslot"><input type='file' /></div>
+                <div class="btncol" align="left">
+                  <button class="btn btn-danger minusbutton" href="#!">&#x2212;</button>
+                </div>
+              </li>
+            </ul>
             <ul id="secretul">
               <li>
-                <textarea class="test2" rows="1"></textarea>
+                <textarea class="test2" data-icons="0" rows="1"></textarea>
                 <div class="btncol" align="left">
-                  <button class="btn btn-danger minusbutton" href="#">&#x2212;</button>
-                  <button class="btn btn-primary addbutton" href="#">&#x22ef;</button>
+                  <button class="btn btn-danger minusbutton" href="#!">&#x2212;</button>
+                  <button class="btn btn-primary addbutton" href="#!">&#x22ef;</button>
                   <div class="dropdown-content">
-                    <a class = "textbutton" href="#">Text<img src="../svgs/icons/document-text.svg"></a>
+                    <a class = "textbutton" href="#!">Text<img src="../svgs/icons/document-text.svg"></a>
                     <hr>
-                    <a class = "imgbutton" href="#">Image<img src = "../svgs/icons/image.svg"></a>
+                    <a class = "imgbutton" href="#!">Image<img src = "../svgs/icons/image.svg"></a>
                     <hr>
-                    <a class = "linkbtn" href="#">Link<img src = "../svgs/icons/box-arrow-up-right.svg"></a>
+                    <a class = "linkbtn" href="#!">Link<img src = "../svgs/icons/box-arrow-up-right.svg"></a>
                   </div>
                 </div>
               </li>
@@ -84,44 +104,44 @@
 
 
             <li id="firstpt">
-              <textarea class="test2" rows="1" placeholder="Bullet 1"></textarea>
+              <textarea class="test2" data-icons="0" rows="1" placeholder="Bullet 1"></textarea>
               <div class="btncol" align="left">
-                <button class="btn btn-danger minusbutton" href="#">&#x2212;</button>
-                <button class="btn btn-primary addbutton" href="#">&#x22ef;</button>
+                <button class="btn btn-danger minusbutton" href="#!">&#x2212;</button>
+                <button class="btn btn-primary addbutton" href="#!">&#x22ef;</button>
                 <div class="dropdown-content">
-                  <a class = "textbutton" href="#">Text<img src="../svgs/icons/document-text.svg"></a>
+                  <a class = "textbutton" href="#!">Text<img src="../svgs/icons/document-text.svg"></a>
                   <hr>
-                  <a class = "imgbutton" href="#">Image<img src = "../svgs/icons/image.svg"></a>
+                  <a class = "imgbutton" href="#!">Image<img src = "../svgs/icons/image.svg"></a>
                   <hr>
-                  <a class = "linkbtn" href="#">Link<img src = "../svgs/icons/box-arrow-up-right.svg"></a>
+                  <a class = "linkbtn" href="#!">Link<img src = "../svgs/icons/box-arrow-up-right.svg"></a>
                 </div>
               </div>
             </li>
             <li>
-              <textarea class="test2" rows="1" placeholder="Bullet 2"></textarea>
+              <textarea class="test2" data-icons="0" rows="1" placeholder="Bullet 2"></textarea>
               <div class="btncol" align="left">
-                <button class="btn btn-danger minusbutton" href="#">&#x2212;</button>
-                <button class="btn btn-primary addbutton" href="#">&#x22ef;</button>
+                <button class="btn btn-danger minusbutton" href="#!">&#x2212;</button>
+                <button class="btn btn-primary addbutton" href="#!">&#x22ef;</button>
                 <div class="dropdown-content">
-                  <a class = "textbutton" href="#">Text<img src="../svgs/icons/document-text.svg"></a>
+                  <a class = "textbutton" href="#!">Text<img src="../svgs/icons/document-text.svg"></a>
                   <hr>
-                  <a class = "imgbutton" href="#">Image<img src = "../svgs/icons/image.svg"></a>
+                  <a class = "imgbutton" href="#!">Image<img src = "../svgs/icons/image.svg"></a>
                   <hr>
-                  <a class = "linkbtn" href="#">Link<img src = "../svgs/icons/box-arrow-up-right.svg"></a>
+                  <a class = "linkbtn" href="#!">Link<img src = "../svgs/icons/box-arrow-up-right.svg"></a>
                 </div>
               </div>
             </li>
             <li>
-              <textarea class="test2" rows="1" placeholder="Bullet 3"></textarea>
+              <textarea class="test2" data-icons="0" rows="1" placeholder="Bullet 3"></textarea>
               <div class="btncol" align="left">
-                <button class="btn btn-danger minusbutton" href="#">&#x2212;</button>
-                <button class="btn btn-primary addbutton" href="#">&#x22ef;</button>
+                <button class="btn btn-danger minusbutton" href="#!">&#x2212;</button>
+                <button class="btn btn-primary addbutton" href="#!">&#x22ef;</button>
                 <div class="dropdown-content">
-                  <a class = "textbutton" href="#">Text<img src="../svgs/icons/document-text.svg"></a>
+                  <a class = "textbutton" href="#!">Text<img src="../svgs/icons/document-text.svg"></a>
                   <hr>
-                  <a class = "imgbutton" href="#">Image<img src = "../svgs/icons/image.svg"></a>
+                  <a class = "imgbutton" href="#!">Image<img src = "../svgs/icons/image.svg"></a>
                   <hr>
-                  <a class = "linkbtn" href="#">Link<img src = "../svgs/icons/box-arrow-up-right.svg"></a>
+                  <a class = "linkbtn" href="#!">Link<img src = "../svgs/icons/box-arrow-up-right.svg"></a>
                 </div>
               </div>
             </li>
@@ -130,7 +150,7 @@
           </ul>
           <ul>
             <li>
-              <button class="btn btn-light newpt2" href="#">+</button>
+              <button class="btn btn-light newpt2" href="#!">+</button>
             </li>
           </ul>
         </div>
@@ -146,19 +166,19 @@
         <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="#">About</a>
+              <a href="#!">About</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Contact</a>
+              <a href="#!">Contact</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
+              <a href="#!">Terms of Use</a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
+              <a href="#!">Privacy Policy</a>
             </li>
           </ul>
 
@@ -167,17 +187,17 @@
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
           <ul class="list-inline mb-0">
             <li class="list-inline-item mr-3">
-              <a href="#">
+              <a href="#!">
                 <i class="fab fa-facebook fa-2x fa-fw"></i>
               </a>
             </li>
             <li class="list-inline-item mr-3">
-              <a href="#">
+              <a href="#!">
                 <i class="fab fa-twitter-square fa-2x fa-fw"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="#!">
                 <i class="fab fa-instagram fa-2x fa-fw"></i>
               </a>
             </li>

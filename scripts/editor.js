@@ -25,7 +25,6 @@ $(document).ready(function(){
     $(this).closest("li").append(subpt);
     $(this).closest(".dropdown-content").hide();
 
-    console.log(currenttext.data('icons'));
 
   });
 
@@ -45,7 +44,6 @@ $(document).ready(function(){
     var subimg = $("#secretimg").clone(true);
     $(subimg).css("display", "block");
     $(this).closest("li").append(subimg);
-    console.log(currenttext.data('icons'));
 
   });
 
@@ -53,45 +51,100 @@ $(document).ready(function(){
   $('.linkbtn').click(function(){
     var currentli = $(this).closest("li");
     var currenttext = $(currentli).children(".test2");
+
+    var linkvar = $(currenttext).next();
+    var linktext = $(linkvar).attr("href");
+
+    if (linktext!="#") {
+      $('#inputURL').val(linktext);
+    }
+    else {
+      $('#inputURL').val("");
+    }
+
     $(currenttext).addClass("awaitingLink");
     $("#myModal").css("display", "block");
-
-
   });
 
   //cancel button for link popup
   $('#cancellink').click(function(){
+    var linkwaiter = $(".awaitingLink");
+    $(linkwaiter).removeClass("awaitingLink");
     $("#myModal").css("display", "none");
   });
   //submit button for link popup
   $('#submitlink').click(function(){
     var intext = $('#inputURL').val();
+    if (intext == "") {
+      intext = "#";
+    }
     console.log(intext);
     $("#myModal").css("display", "none");
     var linkwaiter = $(".awaitingLink");
 
+    var linkvar = $(linkwaiter).next();
+    $(linkvar).attr("href", intext);
 
-    if (!linkwaiter.hasClass("linkiconadded")){
-      var myNumber = $(linkwaiter).data('icons');
-      myNumber = myNumber + 1;
-      $(linkwaiter).data('icons', myNumber);
 
+
+    if (intext !== "#"){
+      linkwaiter.addClass("linkiconadded");
     }
-    linkwaiter.addClass("linkiconadded");
-    console.log(linkwaiter.data('icons'));
+    else {
+      linkwaiter.removeClass("linkiconadded");
+    }
+
     $(linkwaiter).removeClass("awaitingLink");
 
   });
 
   //Function to remove bulletpoint upon clicking minus symbol
   $('.minusbutton').click(function(){
-    console.log("minus successfully used");
+
+    var minustype = "";
+
+    if ($(this).siblings(".addbutton").length == 0) {
+      console.log("imgidentified");
+      minustype = "img";
+      var parentsecretimg = $(this).closest("li").parent("#secretimg");
+
+      var parenttext = $(parentsecretimg).siblings("textarea");
+      $(parentsecretimg).remove();
+    }
+    else {
+      minustype = "txt";
+      var parentsecretul = $(this).closest("li").parent("#secretul");
+      var parenttext = $(parentsecretul).siblings("textarea");
+      $(parentsecretul).remove();
+    }
+
+    console.log(minustype);
+
     $(this).closest("li").remove();
+    return(minusCheck(minustype, parenttext));
+
   });
+
+  //gets rid of img/text icon from parent textbox if there are no more matching items below
+  function minusCheck(type, par){
+
+    var istrue = $(par).hasClass("texticonadded");
+
+    var imgnum = $(par).siblings("#secretimg").length;
+    console.log(imgnum);
+    var txtnum = $(par).siblings("#secretul").length;
+    console.log(txtnum);
+
+    if (type == "img" && imgnum == 0) {
+      $(par).removeClass("imgiconadded");
+    }
+    else if (type == "txt" && txtnum == 0) {
+      $(par).removeClass("texticonadded");
+    }
+  }
 
   //upon mouseover, dropdown content appears below "add button" (next to minus)
   $('.addbutton').mouseover(function(){
-    console.log("add successfully used");
     var tt = $(this).siblings(".dropdown-content");
     if($(tt).is(":visible")) {
       $(tt).hide();
@@ -116,7 +169,6 @@ $(document).ready(function(){
 
 
 $(window).on("load", function() {
-  console.log("focusworking")
   $("#focused").focus();
 });
 

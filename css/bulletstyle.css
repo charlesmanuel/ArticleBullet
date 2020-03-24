@@ -4,6 +4,7 @@
   border-width:3px!important;
   margin-bottom:400px;
   text-align:left;
+  min-height:474px;
 }
 
 textarea {
@@ -18,6 +19,10 @@ textarea {
 
 .test[placeholder]:empty:focus:before {
     content: "";
+}
+
+.test {
+  cursor:text;
 }
 
 p {
@@ -86,8 +91,7 @@ p {
 }
 
 .dropdown-content {
-  display: hidden;
-  display: block;
+  display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 80px;
@@ -124,7 +128,6 @@ p {
   border-style:solid;
   border-color:#d3d3d3;
   border-width:1px;
-  border-left-style:none;
   border-right-style:none;
 }
 
@@ -137,7 +140,7 @@ p {
   margin-bottom:.3px;
 }
 
-a img {
+.dropdown-content a img {
   float:right;
   padding-top:5.3px;
 }
@@ -163,6 +166,17 @@ ul ul ul ul .imgslot {
 
 ul ul ul ul .btncol {
   width:14.5%!important;
+}
+
+ul ul ul #secretul .minusbutton {
+  border-right:solid;
+  border-right-width:1px;
+  padding-bottom:2px!important;
+  border-top-right-radius: 4px!important;
+  border-bottom-right-radius: 4px!important;
+}
+ul ul ul ul .addbutton {
+  display:none;
 }
 
 header li li{
@@ -267,7 +281,7 @@ label {
 }
 .modal-content button {
   display:inline!important;
-  width:15%!important;
+  width:71px;
   padding:4px 6px !important;
   margin-right:10px!important;
 }
@@ -275,6 +289,7 @@ label {
 #secretimg {
   margin-top:15px;
   display:none;
+  list-style:none;
 }
 
 
@@ -284,4 +299,22 @@ label {
   padding-bottom:3px!important;
   border-top-right-radius: 4px!important;
   border-bottom-right-radius: 4px!important;
+}
+
+.addicon {
+  padding-bottom:2px;
+  pointer-events: none;
+}
+
+.imgslot input {
+  min-height:29px;
+  vertical-align: middle;
+}
+
+.URLtext {
+  display:none;
+}
+
+.editorpage {
+  padding-top:10rem!important;
 }

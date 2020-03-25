@@ -169,7 +169,7 @@ table {
 
 .container2 {
   max-width:1900px!important;
-  min-height:570px!important;
+  min-height:620px!important;
 }
 
 .container3 {
@@ -215,4 +215,12 @@ table {
 @keyframes mymove {
   from {background-color: #D3D3D3;}
   to {background-color: #FFFFFF;}
+}
+
+nav .navbar-brand {
+  color:#000000!important;
+  margin-left:40px!important;
+}
+nav .btn-primary {
+  margin-right:40px!important;
 }

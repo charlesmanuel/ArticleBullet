@@ -11,6 +11,15 @@ header li{
   margin-bottom:10px;
 }
 
+footer {
+  background-color:#2D3E50!important;
+  color:white!important;
+}
+footer a {
+  text-decoration:none!important;
+  color:white!important;
+}
+
 
 /*
 .preview h2{
@@ -196,6 +205,7 @@ table {
   top:100px;
   left:55%!important;
   pointer-events:none;
+  overflow:hidden;
 }
 
 .highlighted {
@@ -223,4 +233,9 @@ nav .navbar-brand {
 }
 nav .btn-primary {
   margin-right:40px!important;
+}
+
+
+.iconatts {
+  display:none;
 }

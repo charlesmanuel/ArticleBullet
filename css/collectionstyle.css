@@ -13,7 +13,8 @@
   max-height:300px!important;
   overflow:hidden;
   border-width:3px!important;
-  min-width:188px!important;
+  min-width:255px!important;
+  max-width:255px!important;
 }
 
 

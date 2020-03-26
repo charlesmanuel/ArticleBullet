@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  
   $(".subpt").hide();
   $(".subtweet").hide();
   $(".subimg").hide();

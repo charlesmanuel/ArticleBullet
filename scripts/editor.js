@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
   //hide all pre-generated dropdown menus
   $(".test").focusout(function(){
@@ -22,6 +24,7 @@ $(document).ready(function(){
 
     var subpt = $("#secretul").clone(true);
     $(subpt).css("display", "block");
+    $(subpt).addClass("point")
     $(this).closest("li").append(subpt);
     $(this).closest(".dropdown-content").hide();
 
@@ -43,6 +46,7 @@ $(document).ready(function(){
 
     var subimg = $("#secretimg").clone(true);
     $(subimg).css("display", "block");
+    $(subimg).addClass("point");
     $(this).closest("li").append(subimg);
 
   });
@@ -78,7 +82,6 @@ $(document).ready(function(){
     if (intext == "") {
       intext = "#";
     }
-    console.log(intext);
     $("#myModal").css("display", "none");
     var linkwaiter = $(".awaitingLink");
 
@@ -104,7 +107,6 @@ $(document).ready(function(){
     var minustype = "";
 
     if ($(this).siblings(".addbutton").length == 0) {
-      console.log("imgidentified");
       minustype = "img";
       var parentsecretimg = $(this).closest("li").parent("#secretimg");
 
@@ -118,7 +120,6 @@ $(document).ready(function(){
       $(parentsecretul).remove();
     }
 
-    console.log(minustype);
 
     $(this).closest("li").remove();
     return(minusCheck(minustype, parenttext));
@@ -131,9 +132,7 @@ $(document).ready(function(){
     var istrue = $(par).hasClass("texticonadded");
 
     var imgnum = $(par).siblings("#secretimg").length;
-    console.log(imgnum);
     var txtnum = $(par).siblings("#secretul").length;
-    console.log(txtnum);
 
     if (type == "img" && imgnum == 0) {
       $(par).removeClass("imgiconadded");
@@ -160,6 +159,7 @@ $(document).ready(function(){
     //$("<li><textarea class='test2' rows='1' placeholder='Bullet 3'></textarea><div class='btncol' align='left'><button class='btn btn-danger minusbutton' href='#'>&#x2212;</button><button class='btn btn-primary addbutton' href='#'>&#x22ef;</button></div></li>").appendTo( "#ultext");
     var nextpt = $( "#secretpt" ).clone(true);
     $(nextpt).css("display", "list-item");
+    $(nextpt).addClass("point");
     $("#ultext").append(nextpt);
   });
 

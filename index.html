@@ -170,6 +170,30 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="./scripts/dropdownhome.js"></script>
 
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBbW7Cd0IXFPaLnbIJpF65Oc5qydBqAkwE",
+      authDomain: "bulletslides.firebaseapp.com",
+      databaseURL: "https://bulletslides.firebaseio.com",
+      projectId: "bulletslides",
+      storageBucket: "bulletslides.appspot.com",
+      messagingSenderId: "990113043362",
+      appId: "1:990113043362:web:0cb3f61c5ef2e141be18fb",
+      measurementId: "G-BV0V40W1YE"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 </body>
 
 </html>
